@@ -1,0 +1,300 @@
+/* ── Reset & Base ── */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+/* ── Header / Navbar ── */
+.header {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header h4 {
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  display: flex;
+  gap: 6px;
+}
+
+.navbar a {
+  color: #ccc;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+a {
+  color: #4361ee;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Page content ── */
+h2 {
+  margin: 28px 24px 4px;
+  font-size: 1.5rem;
+  color: #1a1a2e;
+}
+
+body > p {
+  margin: 0 24px 18px;
+  color: #555;
+}
+
+/* ── Forms ── */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 24px 24px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4361ee;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ── Buttons ── */
+button[type="submit"] {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4361ee;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #3a56d4;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+/* ── Compose box ── */
+.compose-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 24px 24px;
+  max-width: 640px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.compose-box form {
+  margin: 0;
+  max-width: none;
+  gap: 14px;
+}
+
+.compose-box textarea {
+  min-height: 100px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  background: #f9f9fb;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.compose-box textarea:focus {
+  background: #fff;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.12);
+}
+
+.compose-box button[type="submit"] {
+  align-self: flex-end;
+  padding: 10px 28px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #4361ee, #3a56d4);
+  box-shadow: 0 2px 6px rgba(67, 97, 238, 0.3);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.compose-box button[type="submit"]:hover {
+  background: linear-gradient(135deg, #3a56d4, #2f4abf);
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.4);
+}
+
+.compose-box button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+/* ── Membership activation ── */
+body > div > form {
+  flex-direction: row;
+  align-items: center;
+}
+
+body > div > p {
+  margin: 0 24px 12px;
+  padding: 10px 16px;
+  background: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  border-radius: 6px;
+  color: #2e7d32;
+  font-weight: 500;
+  max-width: 480px;
+}
+
+/* ── Message list ── */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 640px;
+}
+
+ul li {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
+}
+
+ul li:hover {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+ul li > p:first-child {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #1a1a2e;
+}
+
+ul li > p:nth-child(2),
+ul li > p:nth-child(3) {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #888;
+}
+
+/* Delete button inside message cards */
+ul li form {
+  margin: 10px 0 0;
+  padding: 0;
+  max-width: none;
+}
+
+ul li form button[type="submit"] {
+  background-color: #e74c3c;
+  font-size: 0.82rem;
+  padding: 6px 14px;
+}
+
+ul li form button[type="submit"]:hover {
+  background-color: #c0392b;
+}
+
+/* ── Error messages ── */
+body > p:first-of-type:not(:empty) {
+  color: #c0392b;
+  background: #fdecea;
+  border-left: 4px solid #c0392b;
+  padding: 10px 16px;
+  margin: 16px 24px;
+  border-radius: 6px;
+  max-width: 480px;
+}
+
+/* ── Auth page helpers ── */
+form + p {
+  margin: 0 24px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  form {
+    margin: 0 16px 20px;
+  }
+
+  ul {
+    margin: 0 16px 24px;
+  }
+
+  h2 {
+    margin: 20px 16px 4px;
+  }
+}
