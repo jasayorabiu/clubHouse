@@ -5,7 +5,7 @@ const getMessages = async (req, res) => {
         const messages = await messageService.getMessages();
         res.status(200).render('index', { user: req.user, messages , error:""});   
     } catch (err) {
-        res.status(500).render('index', { user: req.user, messages: [], error: 'Failed to fetch messages' + error});
+        res.status(500).render('index', { user: req.user, messages: [], error: 'Failed to fetch messages' + err});
     }
 }
 
