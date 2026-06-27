@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch index.js"
+    "start": "node --watch index.js",
+    "postinstall": "prisma generate && prisma migrate deploy"
+
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "ejs": "^5.0.1",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pg": "^8.20.0"
