@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch index.js",
-    "postinstall": "prisma generate && prisma migrate deploy"
+    "start": "node --watch index.js"
 
   },
   "keywords": [],
